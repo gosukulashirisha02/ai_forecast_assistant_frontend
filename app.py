@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 
-S_URL = "http://127.0.0.1:8000"
+S_URL = st.secrets["server_base_url"].rstrip("/")
+
 
 st.title("🌤 AI Weather Agent")
 city=st.text_input("Enter City")
